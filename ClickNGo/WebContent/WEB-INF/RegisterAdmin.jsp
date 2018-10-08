@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	<h1>This is how to register the Admin Account!</h1>
 </body>
 </html>
