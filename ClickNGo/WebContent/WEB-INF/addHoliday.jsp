@@ -7,6 +7,16 @@
 <title>Insert title here</title>
 </head>
 <body>
+<form method="get" action="HolidayServlet">
+<h2>Holiday Available Table</h2>
 
+ID:<input type="text" name="ID">
+Destination:<input type="text" name="Destination">
+Start Data:<input type="text" name="StartData">
+End Data:<input type="text" name="EndData">
+Cost:<input type="text" name="Cost">
+Quantity:<input type="text" name="Quantity">
+<input type="submit" value ="Check  in DB">
+</form>
 </body>
 </html>
