@@ -17,7 +17,7 @@ public enum HolidayDAO {
 	try {
 		
 		Class.forName("com.mysql.jdbc.Driver");
-		connection = DriverManager.getConnection("jdbc:mysql://localhost:3307/ClickNGo", "root", "admin");
+		connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/clickngo", "root", "admin");
 				if(connection !=null) {
 				System.out.println("Connected to demoDB OK!");	
 				}
@@ -30,7 +30,7 @@ public enum HolidayDAO {
 	public void saveID(holiday id) {
 		Connection connection = getConnection();
 		try {
-			PreparedStatement psmt = connection.prepareStatement("INSERT INTO holiday Available (ID) VALUES(?)");
+			PreparedStatement psmt = connection.prepareStatement("INSERT INTO holidayAvailable (ID) VALUES(?)");
 			psmt.setInt(1,id.getID());
 			psmt.executeUpdate();
 			System.out.println("Added" + id.getID()+"to the database.");

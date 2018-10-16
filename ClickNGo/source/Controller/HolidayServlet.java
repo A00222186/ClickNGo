@@ -41,7 +41,7 @@ public class HolidayServlet extends HttpServlet {
 		String EndData=request.getParameter("EndData");
 		int Cost=request.getContentLength();
 		int Quantity=request.getContentLength();
-		//HolidayDAO.instance.checkFirstName(name);
+	//	HolidayDAO.instance
 		request.getRequestDispatcher("addHoliday.jsp").forward(request, response);
 	}
 
