@@ -30,16 +30,16 @@ public enum nameDAO {
 		public void regAdmin(admin newAdmin) {
 			Connection connection = getConnection();
 			try {
-				PreparedStatement psmt = connection.prepareStatement("INSERT INTO admintable (staffid, firstName, lastName, address, email, pword, phone) VALUES(?)");
+				PreparedStatement psmt = connection.prepareStatement("INSERT INTO admintable (staffid, firstName, lastName, address, email, pword, phone) VALUES(?,?,?,?,?,?,?)");
 				psmt.setInt(1,newAdmin.getStaffid());
 				psmt.setString(2,newAdmin.getFirstName());
 				psmt.setString(3,newAdmin.getLastName());
 				psmt.setString(4,newAdmin.getAddress());
 				psmt.setString(5,newAdmin.getEmail());
-				psmt.setString(6,newAdmin.getPassword());
-				psmt.setString(7,newAdmin.getPhone());
+				psmt.setString(6,newAdmin.getPhone());
+				psmt.setString(7,newAdmin.getPassword());
 				psmt.executeUpdate();
-				System.out.println("Added" + newAdmin.getFirstName()+"to the database.");
+				System.out.println("Added " + newAdmin.getFirstName()+" to the database.");
 			}catch(SQLException e) {
 				e.printStackTrace();
 			}	
