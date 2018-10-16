@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 
@@ -14,14 +15,14 @@
 
 		<form action="RegisterServletFactory" method="post">
 			<div class="field" id="searchform">
-			First Name:	<input type="text" name="firstName" /><br>
-			Last Name:	<input type="text" name="lastName" /><br>
-			Email:	<input type="text" name="email" /><br>
-			PhoneNo:	<input type="text" name="phoneno" /><br>
-			Address:	<input type="text" name="address" /><br>
-			Password:	<input type="text" name="password" /><br>
+			First Name:	<input type="text" name="FirstName" /><br>
+			Last Name:	<input type="text" name="LastName" /><br>
+			Email:	<input type="text" name="Email" /><br>
+			PhoneNo:	<input type="text" name="Phoneno" /><br>
+			Address:	<input type="text" name="Address" /><br>
+			Password:	<input type="text" name="Password" /><br>
 				<button type="submit" value="submit">sign up!</button>
-				<!-- button type="cancel" value="cancel">cancel</button-->
+				<button type="reset" value="cancel">cancel</button>
 			</div>
 		</form>
 	</div>
@@ -33,5 +34,7 @@
 <% } %>
 </body>
 </html>
+
+
 
 
