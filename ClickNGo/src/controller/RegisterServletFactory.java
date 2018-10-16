@@ -46,7 +46,7 @@ public class RegisterServletFactory extends HttpServlet {
 		//System.out.println("the first Name is " + firstName);
 		if(FirstName.length() == 0 || FirstName == null || LastName.length() == 0 || LastName == null||Email==null||PhoneNo == 0||Password==null||Password.length()<6) {
 			request.setAttribute("malformedName", "UserName,Email,PhoneNo,Password must not be null and password at least 6 digits");
-			RequestDispatcher malformedName = getServletContext().getRequestDispatcher("/index.jsp");
+			RequestDispatcher malformedName = getServletContext().getRequestDispatcher("/useraccount.jsp");
 			malformedName.forward(request, response);
 		}
 		

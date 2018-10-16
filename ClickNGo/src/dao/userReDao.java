@@ -1,55 +1,110 @@
 package dao;
 
-import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import model.Info;
 
-/**
- * Servlet implementation class RegisterServletFactory
- */
-public class userReDao extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public userReDao() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
+public enum userReDao {
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		//response.getWriter().append("Served at: ").append(request.getContextPath());
+	instance;
+	public Connection getConnection(){
+	Connection connection = null;
+	try {
+		
+		Class.forName("com.mysql.jdbc.Driver");
+		connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/UserTable", "root", "");
+				if(connection !=null) {
+				System.out.println("Connected to UserTable OK!");	
+				}
+	}catch(Exception e) {
+		System.out.println("Connected to UserTable fff!");
+			e.printStackTrace();
+		}
+		return connection;
 	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		HttpSession session = request.getSession();
-		String FirstName = request.getParameter("FirstName");
-		String LastName = request.getParameter("LastName");
-		String Email = request.getParameter("Email");
-		int PhoneNo = request.getContentLength();
-		String Address = request.getParameter("Address");
-		String Password= request.getParameter("Password");
-		//System.out.println("the first Name is " + firstName);
-		if(FirstName.length() == 0 || FirstName == null || LastName.length() == 0 || LastName == null||Email==null||PhoneNo == 0||Password==null||Password.length()<6) {
-			request.setAttribute("malformedName", "UserName,Email,PhoneNo,Password must not be null and password at least 6 digits");
-			RequestDispatcher malformedName = getServletContext().getRequestDispatcher("/index.jsp");
-			malformedName.forward(request, response);
+    
+	
+	public void saveFirstName(Info FirstName) {
+		Connection connection = getConnection();
+		try {
+			PreparedStatement psmt = connection.prepareStatement("INSERT INTO  UserTable(FirstName) VALUES(?)");
+			psmt.setString(1,FirstName.getFirstName());
+			psmt.executeUpdate();
+			System.out.println("Added" + FirstName.getFirstName()+"to the database.");
+		}catch(SQLException e) {
+			e.printStackTrace();
 		}
 		
 	}
+	public void saveLastName(Info LastName) {
+		Connection connection = getConnection();
+		try {
+			PreparedStatement psmt = connection.prepareStatement("INSERT INTO  UserTable(LastName) VALUES(?)");
+			psmt.setString(1,LastName.getLastName());
+			psmt.executeUpdate();
+			System.out.println("Added" + LastName.getFirstName()+"to the database.");
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+		
+	}
+	public void saveEmail(Info Email) {
+		Connection connection = getConnection();
+		try {
+			PreparedStatement psmt = connection.prepareStatement("INSERT INTO  UserTable(Email) VALUES(?)");
+			psmt.setString(1,Email.getEmail());
+			psmt.executeUpdate();
+			System.out.println("Added" + Email.getEmail()+"to the database.");
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+		
+	}
+	public void savePhoneNo(Info PhoneNo) {
+		Connection connection = getConnection();
+		try {
+			PreparedStatement psmt = connection.prepareStatement("INSERT INTO  UserTable(PhoneNo) VALUES(?)");
+			psmt.setInt(PhoneNo.getPhoneNo(), 1);
+			psmt.executeUpdate();
+			System.out.println("Added" + PhoneNo.getPhoneNo()+"to the database.");
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+		
+	}
+	public void saveAddress(Info Address) {
+		Connection connection = getConnection();
+		try {
+			PreparedStatement psmt = connection.prepareStatement("INSERT INTO  UserTable(Address) VALUES(?)");
+			psmt.setString(1,Address.getEmail());
+			psmt.executeUpdate();
+			System.out.println("Added" + Address.getAddress()+"to the database.");
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+		
+	}
+	public void savePassword(Info Password) {
+		Connection connection = getConnection();
+		try {
+			PreparedStatement psmt = connection.prepareStatement("INSERT INTO  UserTable(Password) VALUES(?)");
+			psmt.setString(1,Password.getEmail());
+			psmt.executeUpdate();
+			System.out.println("Added" + Password.getPassword()+"to the database.");
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	
 
+		
+	
 }
 
