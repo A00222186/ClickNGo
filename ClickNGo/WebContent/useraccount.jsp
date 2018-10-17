@@ -18,7 +18,7 @@
 			First Name:	<input type="text" name="FirstName" /><br>
 			Last Name:	<input type="text" name="LastName" /><br>
 			Email:	<input type="text" name="Email" /><br>
-			PhoneNo:	<input type="text" name="Phoneno" /><br>
+			PhoneNo:	<input type="text" name="PhoneNo" /><br>
 			Address:	<input type="text" name="Address" /><br>
 			Password:	<input type="text" name="Password" /><br>
 				<button type="submit" value="submit">sign up!</button>

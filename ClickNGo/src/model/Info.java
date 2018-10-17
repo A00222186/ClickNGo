@@ -4,12 +4,12 @@ public class Info {
 	 private String FirstName;
 	 private String LastName;
 	 private String Email;
-	 private int PhoneNo;
+	 private String PhoneNo;
 	 private String Address;
 	 private String Password;
 	 
 	 
-	 public Info(String FirstName,String LastName,String Email,int PhoneNo,String Address,String Password) 
+	 public Info(String FirstName,String LastName,String Email,String PhoneNo,String Address,String Password) 
 	 {this.FirstName=FirstName;
 	  this.LastName=LastName;
 	  this.Email=Email;
@@ -21,11 +21,10 @@ public class Info {
 	 { return FirstName;}
 	 public String getLastName() {return LastName;}
 	 public String getEmail() {return Email;}
-	 public int getPhoneNo() {return PhoneNo;}
+	 public String getPhoneNo() {return PhoneNo;}
 	 public String getAddress() {return Address;}
 	 public String getPassword() {return Password;}
 	 public void setFirstName(String FirstName)
-	 
 	 {
 		 this.FirstName=FirstName;
 	 }
@@ -39,7 +38,7 @@ public class Info {
 {
 	 this.Email=Email;
 }
-	 public void setPhoneNo(int PhoneNo)
+	 public void setPhoneNo(String PhoneNo)
 
 {
 	 this.PhoneNo=PhoneNo;

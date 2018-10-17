@@ -17,7 +17,7 @@ public enum userReDao {
 	try {
 		
 		Class.forName("com.mysql.jdbc.Driver");
-		connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/UserTable", "root", "");
+		connection = DriverManager.getConnection("jdbc:mysql://localhost:3307/clickngo", "root", "admin");
 				if(connection !=null) {
 				System.out.println("Connected to UserTable OK!");	
 				}
@@ -29,82 +29,23 @@ public enum userReDao {
 	}
     
 	
-	public void saveFirstName(Info FirstName) {
+	public void savenewUser(Info newUser) {
 		Connection connection = getConnection();
 		try {
-			PreparedStatement psmt = connection.prepareStatement("INSERT INTO  UserTable(FirstName) VALUES(?)");
-			psmt.setString(1,FirstName.getFirstName());
+			PreparedStatement psmt = connection.prepareStatement("INSERT INTO  usertable(FirstName,LastName,Email,PhoneNo,Address,pwd) VALUES(?,?,?,?,?,?)");
+			psmt.setString(1,newUser.getFirstName());
+			psmt.setString(2,newUser.getLastName());
+			psmt.setString(3,newUser.getEmail());
+			psmt.setString(4,newUser.getPhoneNo());
+			psmt.setString(5,newUser.getAddress());
+			psmt.setString(6,newUser.getPassword());
 			psmt.executeUpdate();
-			System.out.println("Added" + FirstName.getFirstName()+"to the database.");
+			System.out.println("Added" + newUser.getFirstName()+"to the database.");
 		}catch(SQLException e) {
 			e.printStackTrace();
 		}
 		
-	}
-	public void saveLastName(Info LastName) {
-		Connection connection = getConnection();
-		try {
-			PreparedStatement psmt = connection.prepareStatement("INSERT INTO  UserTable(LastName) VALUES(?)");
-			psmt.setString(1,LastName.getLastName());
-			psmt.executeUpdate();
-			System.out.println("Added" + LastName.getFirstName()+"to the database.");
-		}catch(SQLException e) {
-			e.printStackTrace();
-		}
-		
-	}
-	public void saveEmail(Info Email) {
-		Connection connection = getConnection();
-		try {
-			PreparedStatement psmt = connection.prepareStatement("INSERT INTO  UserTable(Email) VALUES(?)");
-			psmt.setString(1,Email.getEmail());
-			psmt.executeUpdate();
-			System.out.println("Added" + Email.getEmail()+"to the database.");
-		}catch(SQLException e) {
-			e.printStackTrace();
-		}
-		
-	}
-	public void savePhoneNo(Info PhoneNo) {
-		Connection connection = getConnection();
-		try {
-			PreparedStatement psmt = connection.prepareStatement("INSERT INTO  UserTable(PhoneNo) VALUES(?)");
-			psmt.setInt(PhoneNo.getPhoneNo(), 1);
-			psmt.executeUpdate();
-			System.out.println("Added" + PhoneNo.getPhoneNo()+"to the database.");
-		}catch(SQLException e) {
-			e.printStackTrace();
-		}
-		
-	}
-	public void saveAddress(Info Address) {
-		Connection connection = getConnection();
-		try {
-			PreparedStatement psmt = connection.prepareStatement("INSERT INTO  UserTable(Address) VALUES(?)");
-			psmt.setString(1,Address.getEmail());
-			psmt.executeUpdate();
-			System.out.println("Added" + Address.getAddress()+"to the database.");
-		}catch(SQLException e) {
-			e.printStackTrace();
-		}
-		
-	}
-	public void savePassword(Info Password) {
-		Connection connection = getConnection();
-		try {
-			PreparedStatement psmt = connection.prepareStatement("INSERT INTO  UserTable(Password) VALUES(?)");
-			psmt.setString(1,Password.getEmail());
-			psmt.executeUpdate();
-			System.out.println("Added" + Password.getPassword()+"to the database.");
-		}catch(SQLException e) {
-			e.printStackTrace();
-		}
-		
-	}
-	
-	
-
-		
+	}	
 	
 }
 
