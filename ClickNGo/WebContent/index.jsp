@@ -2,6 +2,7 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
+<link type="text/css" rel="stylesheet" href="/WEB-INF/resouces/css/AdminRegCSS.css">
 	<head>
 		<meta charset="ISO-8859-1">
 		<title>Admin Registration</title>
