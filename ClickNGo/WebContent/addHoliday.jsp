@@ -7,9 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form method="get" action="HolidayServlet">
+<form method="post" action="HolidayServlet">
 <h2>Holiday Available Table</h2>
-
 ID:<input type="text" name="ID">
 Destination:<input type="text" name="Destination">
 Start Data:<input type="text" name="StartData">

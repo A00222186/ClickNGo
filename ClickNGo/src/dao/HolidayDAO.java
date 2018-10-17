@@ -1,4 +1,4 @@
-package DAO;
+package dao;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -17,7 +17,7 @@ public enum HolidayDAO {
 	try {
 		
 		Class.forName("com.mysql.jdbc.Driver");
-		connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/clickngo", "root", "admin");
+		connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/clickngodb", "root", "admin");
 				if(connection !=null) {
 				System.out.println("Connected to demoDB OK!");	
 				}
@@ -30,7 +30,7 @@ public enum HolidayDAO {
 	public void addHoliday(holiday newholiday) {
 		Connection connection = getConnection();
 		try {
-			PreparedStatement psmt = connection.prepareStatement("INSERT INTO holiday (ID, Destination, StartData, EndData, Cost, Quantity) VALUES(?,?,?,?,?,?)");
+			PreparedStatement psmt = connection.prepareStatement("INSERT INTO holidaytable (ID, Destination, StartData, EndData, Cost, Quantity) VALUES(?,?,?,?,?,?)");
 			psmt.setInt(1,newholiday.getID());
 			psmt.setString(2,newholiday.getDestination());
 			psmt.setString(3,newholiday.getStartData());

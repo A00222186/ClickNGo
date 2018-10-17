@@ -1,4 +1,4 @@
-package Controller;
+package controller;
 
 import java.io.IOException;
 import java.io.*;
@@ -8,13 +8,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import DAO.HolidayDAO;
+import dao.HolidayDAO;
 import model.holiday;
 
 /**
  * Servlet implementation class MyServlet
  */
-@WebServlet("/MyServlet")
+@WebServlet("/HolidayServlet")
 public class HolidayServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -50,8 +50,7 @@ public class HolidayServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
-		
+		//doGet(request, response);
 //		PrintWriter p=response.getWriter();
 //		String name = request.getParameter("name");
 //		p.println("<p>hello"+name+"</p>");
