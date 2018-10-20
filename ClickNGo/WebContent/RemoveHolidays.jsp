@@ -4,12 +4,17 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>RemoveHoliday</title>
 </head>
-<body>
+<body <%out.print("style=\"text-align:center;background-color:#E6E6FA\""); %>>
+<h2>Remove Holiday</h2>
+
 <form method="delete" action="RemoveHolidayServlet">
-Enter Holiday ID to remove:<input type="text" name="remholiday">
-<input type="submit" value= "remove ">
+<div <%out.print("style=\"margin-top:20px;font-size:20px;\""); %>s>
+<p <%out.print("style=\"margin-top:2px\""); %>>Enter Holiday ID to remove:</p>
+<input type="text" name="remholiday" <%out.print("style=\"border-radius:5px\""); %>><br>
+<input type="submit" value= "remove " <%out.print("style=\"font-size:20px;margin-top:10px;border-radius:5px\""); %>>
+</div>
 </form>
 </body>
 </html>
