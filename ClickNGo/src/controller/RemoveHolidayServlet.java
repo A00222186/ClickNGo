@@ -40,7 +40,7 @@ public class RemoveHolidayServlet extends HttpServlet {
 		doGet(request, response);
 	}*/
     
-    protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
 		int RemoveID = Integer.parseInt(request.getParameter("remholiday"));
