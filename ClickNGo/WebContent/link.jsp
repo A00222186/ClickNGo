@@ -12,5 +12,6 @@
 <p <%out.print("style=\"margin-top:50px\""); %>><input type = "button" value = "Register Admin" onclick = "window.location.href = 'index.jsp'" <%out.print("style=\"background-color:#DDDDDD;border-radius:5px;font-size:25px;margin-right:90px\""); %>></p>
 <p <%out.print("style=\"margin-top:50px\""); %>><input type = "button" value = "Add Holiday" onclick = "window.location.href = 'addHoliday.jsp'" <%out.print("style=\"background-color:#DDDDDD;border-radius:5px;font-size:25px;margin-right:100px\""); %>></p>
 <p <%out.print("style=\"margin-top:50px\""); %>><input type = "button" value = "Remove Holiday" onclick = "window.location.href = 'RemoveHolidays.jsp'" <%out.print("style=\"background-color:#DDDDDD;border-radius:5px;font-size:25px;margin-right:80px\""); %>></p>
+<p <%out.print("style=\"margin-top:50px\""); %>><input type = "button" value = "Browse Holidays" onclick = "window.location.href = 'new.jsp'" <%out.print("style=\"background-color:#DDDDDD;border-radius:5px;font-size:25px;margin-right:80px\""); %>></p>
 </body>
 </html>
