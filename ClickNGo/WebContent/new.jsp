@@ -22,6 +22,8 @@
            <td>Destination</td>
            <td>Start Date</td>
            <td>End Date</td>
+           <td>Cost (Euro)</td>
+           <td>Quantity</td>
        </tr>
          <%
             TitleDAO dao=new TitleDAO();
@@ -33,6 +35,8 @@
                <td><%=tl.getDes() %></td>
                <td><%=tl.getStartdate() %>></td>
                <td><%=tl.getEnddate() %></td>
+               <td><%=tl.getCost() %></td>
+               <td><%=tl.getQuantity() %></td>
           </tr>
             <%}
         %>
