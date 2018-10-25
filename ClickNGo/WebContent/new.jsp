@@ -33,7 +33,7 @@
            <tr>
                <td><%=tl.getId() %></td>
                <td><%=tl.getDes() %></td>
-               <td><%=tl.getStartdate() %>></td>
+               <td><%=tl.getStartdate() %></td>
                <td><%=tl.getEnddate() %></td>
                <td><%=tl.getCost() %></td>
                <td><%=tl.getQuantity() %></td>

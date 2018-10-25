@@ -17,19 +17,19 @@ public class TitleDAO {
 		          }
 		          
 		         try {
-		              con=DriverManager.getConnection("jdbc:mysql://localhost:3306/clickngodb","root","admin");
+		              con=DriverManager.getConnection("jdbc:mysql://localhost:3307/clickngodb","root","admin");
 		              String sql="select * from holidaytable";
 		              psmt=con.prepareStatement(sql);
 		              rs=psmt.executeQuery();
 		             
 		              while(rs.next())
 		             {
-		                  int id=rs.getInt("id");
-		                  String des=rs.getString("des");
-		                  String startdate=rs.getString("startdate");
-		                  String enddate=rs.getString("enddate");
-		                  int cost = rs.getInt("cost");
-		                  int quan = rs.getInt("quantity");
+		                  int id=rs.getInt("ID");
+		                  String des=rs.getString("Destination");
+		                  String startdate=rs.getString("StartDate");
+		                  String enddate=rs.getString("EndDate");
+		                  int cost = rs.getInt("Cost");
+		                  int quan = rs.getInt("Quantity");
 		                  Title tl=new Title(id, des, startdate, enddate, cost, quan);
 		                  list.add(tl);
 		              }
