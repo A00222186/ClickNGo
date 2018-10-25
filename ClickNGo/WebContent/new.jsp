@@ -15,13 +15,13 @@
 <title>Insert title here</title>
 </head>
 <body <%out.print("style=\"background-image:url(holiday2.jpg);background-position:center;background-repeat:repeat y;text-align:right;background-color:#E6E6FA\""); %>>>
-
-  <table border="1">
+<div <%out.print("style=\"margin-top:20px;font-size:20px;\""); %>s>
+  <table border="1" <%out.print("style=\"float:right\""); %>>
        <tr>
-          <td>id</td>
-           <td>name</td>
-           <td>creator</td>
-           <td>createTime</td>
+          <td>Holiday ID</td>
+           <td>Destination</td>
+           <td>Start Date</td>
+           <td>End Date</td>
        </tr>
          <%
             TitleDAO dao=new TitleDAO();
@@ -37,5 +37,6 @@
             <%}
         %>
    </table>
+</div>
 </body>
 </html>
