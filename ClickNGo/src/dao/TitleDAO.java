@@ -17,8 +17,8 @@ public class TitleDAO {
 		          }
 		          
 		         try {
-		              con=DriverManager.getConnection("jdbc:mysql://localhost:3306/clickngo","root","admin");
-		              String sql="select * from holiday";
+		              con=DriverManager.getConnection("jdbc:mysql://localhost:3306/clickngodb","root","admin");
+		              String sql="select * from holidaytable";
 		              psmt=con.prepareStatement(sql);
 		              rs=psmt.executeQuery();
 		             
@@ -28,7 +28,9 @@ public class TitleDAO {
 		                  String des=rs.getString("des");
 		                  String startdate=rs.getString("startdate");
 		                  String enddate=rs.getString("enddate");
-		                  Title tl=new Title(id, des, startdate, enddate);
+		                  int cost = rs.getInt("cost");
+		                  int quan = rs.getInt("quantity");
+		                  Title tl=new Title(id, des, startdate, enddate, cost, quan);
 		                  list.add(tl);
 		              }
 		              

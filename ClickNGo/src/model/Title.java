@@ -8,6 +8,8 @@ public class Title {
      private String des;
     private String startdate;
     private String enddate;
+    private int cost;
+    private int quantity;
      
     public int getId() {
         return id;
@@ -33,12 +35,27 @@ public class Title {
      public void setEnddate(String enddate) {
          this.enddate = enddate;
      }
-     public Title(int id, String des, String startdate, String enddate) {
+     
+     public int getCost() {
+		return cost;
+	}
+	public void setCost(int cost) {
+		this.cost = cost;
+	}
+	public int getQuantity() {
+		return quantity;
+	}
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+	public Title(int id, String des, String startdate, String enddate, int cc, int qu) {
          super();
          this.id = id;
-        this.des = des;
+         this.des = des;
          this.startdate = startdate;
          this.enddate = enddate;
+         this.cost = cc;
+         this.quantity = qu;
      }
      
  }
