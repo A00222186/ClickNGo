@@ -40,7 +40,14 @@
           </tr>
             <%}
         %>
-   </table>
+   </table><br>
+   <div<%out.print("style=\"float:right\""); %>>Input the ID you want to purchase</div>
+   <form method="post" action="BuyHolidayServlet">
+   <input type="text" name="holidayID"<%out.print("style=\"margin-left:100px\""); %>>
+   <button type="submit" value = "submit"<%out.print("style=\"float:right\""); %>>Add to Basket</button>
+   </form>
+   
+   
 </div>
 </body>
 </html>

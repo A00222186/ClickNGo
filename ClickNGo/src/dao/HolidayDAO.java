@@ -44,6 +44,20 @@ public enum HolidayDAO {
 		}	
 	}
 	
+	public void addHolidayToBasket(int holID)
+	{
+		String userID = "User111";
+		Connection connection = getConnection();
+		try {
+			PreparedStatement psmt = connection.prepareStatement("INSERT INTO HolidayHistory(PurchaseHolidayID, HolidayID, Destination, StartDate, UserID ) VALUES(?, (Select HolidayID, Destination, StartDate From HolidayTable Where HolidayID = "+holID+"), ?)");
+			psmt.setInt(1, 100);
+			psmt.setString(2, userID);
+			
+		}catch(SQLException e1)
+		{
+			e1.printStackTrace();
+		}
+	}
 	
 	
 	/*public Name checkFirstName(String name) {
