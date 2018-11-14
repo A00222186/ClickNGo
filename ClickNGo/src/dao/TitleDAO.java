@@ -26,8 +26,8 @@ public class TitleDAO {
 		             {
 		                  int id=rs.getInt("ID");
 		                  String des=rs.getString("Destination");
-		                  String startdate=rs.getString("StartDate");
-		                  String enddate=rs.getString("EndDate");
+		                  String startdate=rs.getString("StartData");
+		                  String enddate=rs.getString("EndData");
 		                  int cost = rs.getInt("Cost");
 		                  int quan = rs.getInt("Quantity");
 		                  Title tl=new Title(id, des, startdate, enddate, cost, quan);
