@@ -1,12 +1,12 @@
-package dao;
+ package dao;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import model.Title;
-public class TitleDAO {
-	 public List<Title> readFirstTitle(){
-		         List<Title> list =new ArrayList<Title>();
+import model.History;
+public class HistoryDAO {
+	 public List<History> readFirstTitle(){
+		         List<History> list =new ArrayList<History>();
 		         Connection con=null;
 		          PreparedStatement psmt=null;
 		          ResultSet rs=null;
@@ -18,19 +18,19 @@ public class TitleDAO {
 		          
 		         try {
 		              con=DriverManager.getConnection("jdbc:mysql://localhost:3307/clickngodb","root","admin");
-		              String sql="select * from holidaytable";
+		              String sql="select * from historytable group by UserID";
 		              psmt=con.prepareStatement(sql);
 		              rs=psmt.executeQuery();
 		             
 		              while(rs.next())
 		             {
-		                  int id=rs.getInt("ID");
-		                  String des=rs.getString("Destination");
-		                  String startdate=rs.getString("StartData");
-		                  String enddate=rs.getString("EndData");
-		                  int cost = rs.getInt("Cost");
-		                  int quan = rs.getInt("Quantity");
-		                  Title tl=new Title(id, des, startdate, enddate, cost, quan);
+		                  int ph=rs.getInt("PurchasedHoliday");
+		                  int hid=rs.getInt("HolidayID");
+		                  String dest=rs.getString("Destination");
+		                  String startdate=rs.getString("StartDate");
+		                  String uid = rs.getString("UserID");
+		                  
+		                  History tl=new History(ph, hid, dest, startdate, uid);
 		                  list.add(tl);
 		              }
 		              
