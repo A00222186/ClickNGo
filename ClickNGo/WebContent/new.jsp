@@ -42,16 +42,22 @@
             <%}
         %>
    </table>
-   </div>
+   
    <br>
+    <br>
+     <br>
+      <br>
+       <br>
+        <br>
+         <br>
    <div>
-   <p <%out.print("style=\"text-align:right\""); %>>Input the ID you want to purchase</p>
+   <p <%out.print("style=\"text-align:right;font-size:20px;\""); %>>Input the ID you want to purchase</p>
    <form method="post" action="BuyHolidayServlet">
-   <input type="text" name="holidayID"<%out.print("style=\"margin-left:100px\""); %>>
-   <button type="submit" value = "submit"<%out.print("style=\"float:right; border-radius:5px;\""); %>>Add to Basket</button>
+   <input type="text" name="holidayID"<%out.print("style=\"margin-left:100px\""); %>><br>
+   <button type="submit" value = "submit"<%out.print("style=\"float:right; border-radius:5px;font-size:15px;\""); %>>Add to Basket</button>
    </form>
    
-   
+   </div>
 </div>
 </body>
 </html>
