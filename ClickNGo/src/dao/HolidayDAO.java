@@ -34,11 +34,11 @@ public enum HolidayDAO {
 	public void addHoliday(holiday newholiday) {
 		Connection connection = getConnection();
 		try {
-			PreparedStatement psmt = connection.prepareStatement("INSERT INTO holidaytable (ID, Destination, StartData, EndData, Cost, Quantity) VALUES(?,?,?,?,?,?)");
+			PreparedStatement psmt = connection.prepareStatement("INSERT INTO holidaytable (ID, Destination, StartDate, EndDate, Cost, Quantity) VALUES(?,?,?,?,?,?)");
 			psmt.setInt(1,newholiday.getID());
 			psmt.setString(2,newholiday.getDestination());
-			psmt.setString(3,newholiday.getStartData());
-			psmt.setString(4,newholiday.getEndData());
+			psmt.setString(3,newholiday.getStartDate());
+			psmt.setString(4,newholiday.getEndDate());
 			psmt.setInt(5,newholiday.getCost());
 			psmt.setInt(6,newholiday.getQuantity());
 			psmt.executeUpdate();
@@ -58,7 +58,7 @@ public enum HolidayDAO {
 			String des = "";
 			String startdate = "";
 			
-			String sql=("Select ID, Destination, StartData From holidaytable Where ID = "+holID);
+			String sql=("Select ID, Destination, StartDate From holidaytable Where ID = "+holID);
             psmt1 = connection.prepareStatement(sql);
             rs=psmt1.executeQuery();
            
@@ -66,7 +66,7 @@ public enum HolidayDAO {
             {
                 holidayid=rs.getInt("ID");
                 des=rs.getString("Destination");
-                startdate=rs.getString("StartData");
+                startdate=rs.getString("StartDate");
             }
             
 			PreparedStatement psmt = connection.prepareStatement("INSERT INTO historytable(PurchasedHolidayID, HolidayID, Destination, StartDate, UserID ) VALUES (?,?,?,?,?)");
