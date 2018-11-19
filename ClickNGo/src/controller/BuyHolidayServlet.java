@@ -37,6 +37,7 @@ public class BuyHolidayServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
+		System.out.println("BuyHolidayServlet.doPostMethod");
 		int ID = Integer.parseInt(request.getParameter("holidayID"));
 		HolidayDAO.instance.addHolidayToBasket(ID);
 		request.getRequestDispatcher("new.jsp").forward(request, response);
