@@ -48,7 +48,7 @@
    <p <%out.print("style=\"text-align:right\""); %>>Input the ID you want to purchase</p>
    <form method="post" action="BuyHolidayServlet">
    <input type="text" name="holidayID"<%out.print("style=\"margin-left:100px\""); %>>
-   <button type="submit" value = "submit"<%out.print("style=\"float:right\""); %>>Add to Basket</button>
+   <button type="submit" value = "submit"<%out.print("style=\"float:right; border-radius:5px;\""); %>>Add to Basket</button>
    </form>
    
    
