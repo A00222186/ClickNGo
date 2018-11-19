@@ -17,7 +17,7 @@ public enum userReDao {
 	try {
 		
 		Class.forName("com.mysql.jdbc.Driver");
-		connection = DriverManager.getConnection("jdbc:mysql://localhost:3307/clickngodb", "root", "admin");
+		connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/clickngodb", "root", "admin");
 				if(connection !=null) {
 				System.out.println("Connected to UserTable OK!");	
 				}
