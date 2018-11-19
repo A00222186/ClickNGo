@@ -15,7 +15,8 @@
 <title>Insert title here</title>
 </head>
 <body <%out.print("style=\"background-image:url(holiday2.jpg);background-position:center;background-repeat:repeat y;text-align:right;background-color:#E6E6FA\""); %>>>
-<div <%out.print("style=\"margin-top:20px;font-size:20px;\""); %>s>
+<div <%out.print("style=\"margin-top:20px;font-size:20px;\""); %>>
+ 
   <table border="1" <%out.print("style=\"float:right\""); %>>
        <tr>
           <td>Holiday ID</td>
@@ -41,6 +42,16 @@
             <%}
         %>
    </table>
+   </div>
+   <br>
+   <div>
+   <p <%out.print("style=\"text-align:right\""); %>>Input the ID you want to purchase</p>
+   <form method="post" action="BuyHolidayServlet">
+   <input type="text" name="holidayID"<%out.print("style=\"margin-left:100px\""); %>>
+   <button type="submit" value = "submit"<%out.print("style=\"float:right\""); %>>Add to Basket</button>
+   </form>
+   
+   
 </div>
 </body>
 </html>
