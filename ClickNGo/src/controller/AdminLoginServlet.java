@@ -35,16 +35,18 @@ public class AdminLoginServlet extends HttpServlet {
 	}*/
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String staffid = (request.getParameter("staffid"));
-		String Password = (request.getParameter("password"));	
-		AdminLoginDAO.instance.AdminLogin(staffid,Password);
-		request.getRequestDispatcher("AdminLogin.jsp").forward(request, response);
+		int staffid = Integer.parseInt(request.getParameter("staffid"));
+		String Password = (request.getParameter("Password"));	
+		boolean status = AdminLoginDAO.instance.AdminLogin(staffid,Password);
+		request.getRequestDispatcher("AdminLogin.jsp");
+		
+		System.out.println("status: " + status);
 	
-		if(staffid==null) {
-			request.getRequestDispatcher("invalidAdmin.jsp").forward(request, response);
-	}else {
-		request.getRequestDispatcher("validAdmin.jsp").forward(request, response);
-	}
+		if(status == false) {
+			request.getRequestDispatcher("invalidLogin.jsp").forward(request, response);
+		}else if(status==true) {
+		request.getRequestDispatcher("validLogin.jsp").forward(request, response);
+		}
 		}
 	
 	

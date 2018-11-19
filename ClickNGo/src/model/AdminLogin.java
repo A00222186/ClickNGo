@@ -1,9 +1,9 @@
 package model;
 
 public class AdminLogin {
-	private String staffid;
+	private int staffid;
 	private String Password;
-	public AdminLogin(String staffid,String Password) {
+	public AdminLogin(int staffid,String Password) {
 
 		  this.staffid=staffid;
 		  
@@ -12,7 +12,7 @@ public class AdminLogin {
 		 
 		 
 		 
-		 public String getEmail() {return staffid;}
+		 public int getStaffid() {return staffid;}
 		 
 		 public String getPassword() {return Password;
 		 

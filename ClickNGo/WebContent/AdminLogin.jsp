@@ -7,7 +7,7 @@
 <title>ADMIN LOGIN</title>
 </head>
 <body>
-<form action="AdminLoginServlet" method="get">
+<form action="AdminLoginServlet" method="post">
 <br>StaffID:<input type="text" name="staffid"/><br/>  
 <br>Password:<input type="Password" name="Password"/><br/>  
 <input type="submit" value="login"/>
