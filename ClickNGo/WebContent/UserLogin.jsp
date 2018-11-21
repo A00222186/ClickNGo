@@ -7,9 +7,9 @@
 <title>USER LOGIN</title>
 </head>
 <body>
-<form action="UserLoginServlet" method="get">
+<form action="UserLoginServlet" method="post">
 <br>Email:<input type="text" name="email"/><br/>  
-<br>Password:<input type="password" name="password"/><br/>  
+<br>Password:<input type="password" name="Password"/><br/>  
 <input type="submit" value="login"/>
 </form>
 

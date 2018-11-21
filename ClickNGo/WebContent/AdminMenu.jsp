@@ -5,9 +5,9 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Admin Logged In </title>
+<title>Admin</title>
 </head>
 <body>
-
+Welcome Admin. 
 </body>
 </html>

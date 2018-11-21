@@ -7,33 +7,31 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import dao.AdminLoginDAO;
 import dao.UserLoginDAO;
 
-/**
- * Servlet implementation class UserLoginServlet
- */
 @WebServlet("/UserLoginServlet")
 public class UserLoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
+   
     public UserLoginServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		//response.getWriter().append("Served at: ").append(request.getContextPath());
-		String Email = (request.getParameter("email"));
-		String Password = (request.getParameter("password"));	
-		UserLoginDAO.instance.UserLogin(Email,Password);
-		request.getRequestDispatcher("UserLogin.jsp").forward(request, response);
-	}
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String email = (request.getParameter("email"));
+		String Password = (request.getParameter("Password"));	
+		boolean status = UserLoginDAO.instance.UserLogin(email,Password);
+		request.getRequestDispatcher("UserLogin.jsp");
+		
+		System.out.println("status: " + status);
+	
+		if(status == false) {
+			request.getRequestDispatcher("invalidLogin.jsp").forward(request, response);
+		}else if(status==true) {
+		request.getRequestDispatcher("UserMenu.jsp").forward(request, response);
+		}
+		}
 
 }

@@ -8,7 +8,7 @@
 </head>
 <body>
 <form action="AdminLoginServlet" method="post">
-<br>StaffID:<input type="text" name="staffid"/><br/>  
+<br>Staff ID:<input type="text" name="staffid"/><br/>  
 <br>Password:<input type="Password" name="Password"/><br/>  
 <input type="submit" value="login"/>
 </form>
