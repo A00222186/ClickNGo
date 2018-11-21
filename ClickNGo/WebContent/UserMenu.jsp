@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Admin Not Found</title>
+<title>User</title>
 </head>
 <body>
-Login unsuccesful. Please try again. 
+Welcome User.
 </body>
 </html>

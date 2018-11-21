@@ -4,15 +4,14 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>ADMIN LOGIN</title>
+<title>USER LOGIN</title>
 </head>
 <body>
-<form action="AdminLoginServlet" method="post">
-<br>Staff ID:<input type="text" name="staffid"/><br/>  
-<br>Password:<input type="Password" name="Password"/><br/>  
+<form action="UserLoginServlet" method="post">
+<br>Email:<input type="text" name="email"/><br/>  
+<br>Password:<input type="password" name="Password"/><br/>  
 <input type="submit" value="login"/>
 </form>
-
 
 </body>
 </html>
