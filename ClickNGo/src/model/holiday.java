@@ -4,8 +4,8 @@ public class holiday{
 	
 	private int ID;
 	private String Destination;
-	private String StartData;
-	private String EndData;
+	private String StartDate;
+	private String EndDate;
 	private int Cost;
 	private int Quantity;
 	
@@ -13,8 +13,8 @@ public class holiday{
 	{
 		this.ID=id;
 		this.Destination=d;
-		this.StartData=sd;
-		this.EndData=ed;
+		this.StartDate=sd;
+		this.EndDate=ed;
 		this.Cost=c;
 		this.Quantity=q;
 		
@@ -31,17 +31,17 @@ public class holiday{
 	public void setDestination(String destination) {
 		this.Destination = destination;
 	}
-	public String getStartData() {
-		return StartData;
+	public String getStartDate() {
+		return StartDate;
 	}
-	public void setStartData(String startData) {
-		this.StartData = startData;
+	public void setStartDate(String startDate) {
+		this.StartDate = startDate;
 	}
-	public String getEndData() {
-		return EndData;
+	public String getEndDate() {
+		return EndDate;
 	}
-	public void setEndData(String endData) {
-		this.EndData = endData;
+	public void setEndDate(String endDate) {
+		this.EndDate = endDate;
 	}
 	public int getCost() {
 		return Cost;
