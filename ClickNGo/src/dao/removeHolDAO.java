@@ -11,7 +11,7 @@ public enum removeHolDAO {
 	try {
 		
 		Class.forName("com.mysql.jdbc.Driver");
-		connection = DriverManager.getConnection("jdbc:mysql://Localhost:3307/clickngodb", "root", "admin");
+		connection = DriverManager.getConnection("jdbc:mysql://Localhost:3306/clickngodb", "root", "admin");
 				if(connection !=null) {
 				System.out.println("Connected to ClickNGoDB OK!");	
 				}

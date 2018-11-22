@@ -17,14 +17,14 @@ public class HistoryDAO {
 		          }
 		          
 		         try {
-		              con=DriverManager.getConnection("jdbc:mysql://localhost:3307/clickngodb","root","admin");
-		              String sql="select * from historytable group by UserID";
+		              con=DriverManager.getConnection("jdbc:mysql://localhost:3306/clickngodb","root","admin");
+		              String sql="select * from historytable order by UserID";
 		              psmt=con.prepareStatement(sql);
 		              rs=psmt.executeQuery();
 		             
 		              while(rs.next())
 		             {
-		                  int ph=rs.getInt("PurchasedHoliday");
+		                  int ph=rs.getInt("PurchasedHolidayID");
 		                  int hid=rs.getInt("HolidayID");
 		                  String dest=rs.getString("Destination");
 		                  String startdate=rs.getString("StartDate");
