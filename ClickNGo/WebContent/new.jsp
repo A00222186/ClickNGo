@@ -12,7 +12,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Buy a Holiday</title>
 <script type="text/javascript">
 function firm()
 { if (window.confirm("Are you sure you want to add to basket?")) 
