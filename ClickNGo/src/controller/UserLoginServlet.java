@@ -28,7 +28,7 @@ public class UserLoginServlet extends HttpServlet {
 		System.out.println("status: " + status);
 	
 		if(status == false) {
-			request.getRequestDispatcher("invalidLogin.jsp").forward(request, response);
+			request.getRequestDispatcher("invalidLoginUser.jsp").forward(request, response);
 		}else if(status==true) {
 		request.getRequestDispatcher("UserMenu.jsp").forward(request, response);
 		}
