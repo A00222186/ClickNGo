@@ -14,6 +14,7 @@
 <p <%out.print("style=\"margin-top:10px;font-size:25px;\""); %>>Enter Holiday ID to remove:</p>
 <input type="text" name="remholiday" <%out.print("style=\"border-radius:5px\""); %>><br>
 <input type="submit" value= "remove " <%out.print("style=\"margin-top:10px;font-size:25px;border-radius:5px;margin-right:15px\""); %>>
+<p <%out.print("style=\"margin-top:30px\""); %>><input type = "button" value = "Back Main" onclick = "window.location.href = 'AdminMenu.jsp'" <%out.print("style=\"background-color:#DDDDDD;border-radius:9px;font-size:20px;margin-left:10px\""); %>></p>
 </div>
 </form>
 </body>

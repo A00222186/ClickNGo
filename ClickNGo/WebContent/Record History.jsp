@@ -42,6 +42,14 @@
             <%}
         %>
    </table>
+   <br>
+    <br>
+     <br>
+      <br>
+       <br>
+        <br>
+         <br>
+         <p><input type = "button" value = "Back" onclick = "window.location.href = 'AdminMenu.jsp'" <%out.print("style=\"background-color:#DDDDDD;border-radius:5px;font-size:15px;\""); %>></p>
 </div>
 </body>
 </html>
