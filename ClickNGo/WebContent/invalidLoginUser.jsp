@@ -10,6 +10,6 @@
 
     <h2  <%out.print("style=\"margin-top:10px; font-size:40px;color:#444444;margin-right:20px\""); %>>Oops! Something went wrong.</h2><br>
 	<h1  <%out.print("style=\"margin-top:10px; font-size:30px;color:#444444;margin-right:40px\""); %>>Please try again.</h1>
-	<p <%out.print("style=\"margin-top:30px\""); %>><input type = "button" value = "TRY AGAIN!" onclick = "window.location.href = 'AdminLogin.jsp' " <%out.print("style=\"background-color:#DDDDDD;border-radius:5px;font-size:25px;margin-right:40px;\""); %>></p>
+	<p <%out.print("style=\"margin-top:30px\""); %>><input type = "button" value = "TRY AGAIN!" onclick = "window.location.href = 'UserLogin.jsp' " <%out.print("style=\"background-color:#DDDDDD;border-radius:5px;font-size:25px;margin-right:40px;\""); %>></p>
 </body>
 </html>

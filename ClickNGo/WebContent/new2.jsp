@@ -58,9 +58,7 @@ function firm()
    <div>
    <p <%out.print("style=\"text-align:right;font-size:20px;\""); %>>Input the ID you want to purchase</p>
    <form method="post" action="BuyHolidayServlet">
-   <input type="text" name="holidayID"<%out.print("style=\"margin-left:100px\""); %>><br>
-   <button type="submit" value = "submit" onclick=firm() <%out.print("style=\"float:right; border-radius:5px;font-size:15px;\""); %>>Add to Basket</button><br>
-  <p><input type = "button" value = "Back" onclick = "window.location.href = 'UserMenu.jsp'" <%out.print("style=\"background-color:#DDDDDD;border-radius:5px;font-size:15px;\""); %>></p>
+  <p><input type = "button" value = "Back" onclick = "window.location.href = 'AdminMenu.jsp'" <%out.print("style=\"background-color:#DDDDDD;border-radius:5px;font-size:15px;\""); %>></p>
    </form>
    
    </div>

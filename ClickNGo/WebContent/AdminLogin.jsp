@@ -16,7 +16,11 @@
 <p <%out.print("style=\"margin-top:30px\""); %>><input type = "button" value = "Back Main" onclick = "window.location.href = 'index.jsp'" <%out.print("style=\"background-color:#DDDDDD;border-radius:9px;font-size:20px;margin-left:10px\""); %>></p>
 	
 </form>
-
+<%if( request.getAttribute( "malformedName" ) != null ) {%>
+<% String malformedName = (String)request.getAttribute("malformedName"); %>
+<% System.out.println("malformed name is " + malformedName); %>
+<font color="red"><%=malformedName %></font>
+<% } %>
 
 </body>
 </html>
