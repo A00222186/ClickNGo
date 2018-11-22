@@ -45,7 +45,7 @@ public class AdminRegServlet extends HttpServlet {
 		String password = request.getParameter("password");
 		admin newAdmin= new admin(staffid, fname, lname, address, email, phone, password);
 		nameDAO.instance.regAdmin(newAdmin);
-		request.getRequestDispatcher("index.jsp").forward(request, response);
+		request.getRequestDispatcher("adminreg.jsp").forward(request, response);
 	}
 
 }
