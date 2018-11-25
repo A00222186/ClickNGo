@@ -6,6 +6,15 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Admin Welcome</title>
+<script type="text/javascript">
+function firm()
+{ if (window.confirm("Do you want to logout?")) 
+{ return false ;
+}
+window.location.href=" index.jsp";
+return true ;
+}
+</script> 
 </head>
 <body <%out.print("style=\"background-image:url(holiday2.jpg);background-position:center;background-repeat:repeat y;text-align:right;background-color:#E6E6FA\""); %>>
 
@@ -16,6 +25,6 @@
 	<p <%out.print("style=\"margin-top:30px\""); %>><input type = "button" value = "Browse Holidays" onclick = "window.location.href = 'new2.jsp' " <%out.print("style=\"background-color:#DDDDDD;border-radius:5px;font-size:25px;margin-right:40px;\""); %>></p>
 	<p <%out.print("style=\"margin-top:30px\""); %>><input type = "button" value = "Remove Holidays" onclick = "window.location.href = 'RemoveHolidays.jsp' " <%out.print("style=\"background-color:#DDDDDD;border-radius:5px;font-size:25px;margin-right:40px;\""); %>></p>
 	<p <%out.print("style=\"margin-top:30px\""); %>><input type = "button" value = "User History" onclick = "window.location.href = 'Record History.jsp' " <%out.print("style=\"background-color:#DDDDDD;border-radius:5px;font-size:25px;margin-right:40px;\""); %>></p>
-	<p <%out.print("style=\"margin-top:30px\""); %>><input type = "button" value = "Log out" onclick = "window.location.href = 'index.jsp' " <%out.print("style=\"background-color:#DDDDDD;border-radius:5px;font-size:25px;margin-right:40px;\""); %>></p>
+	<p <%out.print("style=\"margin-top:30px\""); %>><input type = "button" value = "Log out" onclick=firm() <%out.print("style=\"background-color:#DDDDDD;border-radius:5px;font-size:25px;margin-right:40px;\""); %>></p>
 </body>
 </html>
