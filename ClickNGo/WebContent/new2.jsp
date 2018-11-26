@@ -56,7 +56,7 @@ function firm()
         <br>
          <br>
    <div>
-   <p <%out.print("style=\"text-align:right;font-size:20px;\""); %>>Input the ID you want to purchase</p>
+ 
    <form method="post" action="BuyHolidayServlet">
   <p><input type = "button" value = "Back" onclick = "window.location.href = 'AdminMenu.jsp'" <%out.print("style=\"background-color:#DDDDDD;border-radius:5px;font-size:15px;\""); %>></p>
    </form>
