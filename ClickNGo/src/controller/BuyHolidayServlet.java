@@ -26,13 +26,13 @@ public class BuyHolidayServlet extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
     
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    /*protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
 		int RemHol = Integer.parseInt(request.getParameter("holidayID"));
 		removeHolDAO.instance.remHoliday(RemHol);
 		request.getRequestDispatcher("new.jsp").forward(request, response);
-	}
+	}*/
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
@@ -40,6 +40,7 @@ public class BuyHolidayServlet extends HttpServlet {
 		System.out.println("BuyHolidayServlet.doPostMethod");
 		int ID = Integer.parseInt(request.getParameter("holidayID"));
 		HolidayDAO.instance.addHolidayToBasket(ID);
+		removeHolDAO.instance.remHoliday(ID);
 		request.getRequestDispatcher("new.jsp").forward(request, response);
 	}
 

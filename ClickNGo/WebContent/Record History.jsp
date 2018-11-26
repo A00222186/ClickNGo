@@ -23,7 +23,7 @@
            <td>Holiday ID</td>
            <td>Destination</td>
            <td>Start Date</td>
-           <td>User ID</td>
+           <td>User Email</td>
            
        </tr>
          <%
