@@ -8,9 +8,10 @@
 <script type="text/javascript">
 function firm()
 { if (window.confirm("Do you want to logout?")) 
-{ return false ;
+{ 
+	window.location.href=" index.jsp";return false ;
 }
-window.location.href=" index.jsp";
+
 return true ;
 }
 </script>

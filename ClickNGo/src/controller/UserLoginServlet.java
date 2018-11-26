@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import dao.AdminLoginDAO;
+import dao.HolidayDAO;
 import dao.UserLoginDAO;
 
 @WebServlet("/UserLoginServlet")
@@ -23,6 +24,7 @@ public class UserLoginServlet extends HttpServlet {
 		String email = (request.getParameter("email"));
 		String Password = (request.getParameter("Password"));	
 		boolean status = UserLoginDAO.instance.UserLogin(email,Password);
+		HolidayDAO.instance.getEmail(email);
 		request.getRequestDispatcher("UserLogin.jsp");
 		
 		System.out.println("status: " + status);

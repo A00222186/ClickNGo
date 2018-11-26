@@ -15,6 +15,7 @@ public enum HolidayDAO {
 	Connection con=null;
     PreparedStatement psmt1=null;
     ResultSet rs=null;
+    String userEmail = null;
 	public Connection getConnection(){
 	Connection connection = null;
 	try {
@@ -48,10 +49,14 @@ public enum HolidayDAO {
 		}	
 	}
 	
+	public void getEmail (String em) {
+		userEmail = em;
+	}
+	
 	public void addHolidayToBasket(int holID)
 	{
 		System.out.println("HolidayDAO.addHoliday");
-		String userID = "User111";
+		String userID = userEmail;
 		Connection connection = getConnection();
 		try {
 			int holidayid=0;
