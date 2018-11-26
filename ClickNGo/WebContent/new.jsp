@@ -12,7 +12,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Buy a Holiday</title>
 <script type="text/javascript">
 function firm()
 { if (window.confirm("Are you sure you want to add to basket?")) 
@@ -60,7 +60,7 @@ function firm()
    <form method="post" action="BuyHolidayServlet">
    <input type="text" name="holidayID"<%out.print("style=\"margin-left:100px\""); %>><br>
    <button type="submit" value = "submit" onclick=firm() <%out.print("style=\"float:right; border-radius:5px;font-size:15px;\""); %>>Add to Basket</button><br>
-  <p><input type = "button" value = "Back" onclick = "window.location.href = 'link.jsp'" <%out.print("style=\"background-color:#DDDDDD;border-radius:5px;font-size:15px;\""); %>></p>
+  <p><input type = "button" value = "Back" onclick = "window.location.href = 'UserMenu.jsp'" <%out.print("style=\"background-color:#DDDDDD;border-radius:5px;font-size:15px;\""); %>></p>
    </form>
    
    </div>
