@@ -7,6 +7,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>UserRegister</title>
+<script type="text/javascript">
+function alert()
+{ alert("Register Successfully!") } 
+</script> 
 </head>
 <body <%out.print("style=\"background-image:url(holiday2.jpg);background-position:center;background-repeat:repeat y;text-align:right;background-color:#E6E6FA\""); %>>
 
@@ -21,7 +25,7 @@
 			<p <%out.print("style=\"margin-top:10px;font-size:25px;\""); %>>PhoneNo:	<input type="text" name="PhoneNo" <%out.print("style=\"margin-left:12px;border-radius:5px\""); %>/></p>
 			<p <%out.print("style=\"margin-top:10px;font-size:25px;\""); %>>Address:	<input type="text" name="Address" <%out.print("style=\"margin-left:20px;border-radius:5px\""); %>/></p>
 			<p <%out.print("style=\"margin-top:10px;font-size:25px;\""); %>>Password:	<input type="text" name="Password" <%out.print("style=\"margin-left:10px;border-radius:5px\""); %>/></p>
-				<button type="submit" value="submit"<%out.print("style=\"margin-top:2px;font-size:25px;border-radius:5px;margin-right:15px\""); %>>sign up</button>
+				<button type="submit" value="submit" onclick = alert() <%out.print("style=\"margin-top:2px;font-size:25px;border-radius:5px;margin-right:15px\""); %>>sign up</button>
 				<button type="reset" value="cancel"<%out.print("style=\"margin-top:2px;font-size:25px;border-radius:5px;margin-left:15px\""); %>>clear</button>
 			<p <%out.print("style=\"margin-top:30px\""); %>><input type = "button" value = "Back Main" onclick = "window.location.href = 'index.jsp'" <%out.print("style=\"background-color:#DDDDDD;border-radius:9px;font-size:20px;margin-left:10px\""); %>></p>
 	

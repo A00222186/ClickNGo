@@ -6,6 +6,10 @@
 	<head>
 		<meta charset="ISO-8859-1">
 		<title>Admin Registration</title>
+		<script type="text/javascript">
+function alert()
+{ alert("Register Successfully!") } 
+</script> 
 	</head>
 	<body  <%out.print("style=\"background-image:url(holiday2.jpg);background-position:center;background-repeat:repeat y;text-align:right;background-color:#E6E6FA\""); %>>
 	
@@ -28,7 +32,7 @@
 			
 		<p <%out.print("style=\"margin-top:10px;font-size:25px;\""); %>>	Enter new Password:<input type="text" name="password" <%out.print("style=\"border-radius:5px\"");%>></p>
 			
-			<input type="submit" value ="Register Admin" <%out.print("style=\"margin-top:2px;font-size:25px;border-radius:5px;margin-right:15px\""); %>>
+			<input type="submit" value ="Register Admin" onclick=alert() <%out.print("style=\"margin-top:2px;font-size:25px;border-radius:5px;margin-right:15px\""); %>>
 			<p <%out.print("style=\"margin-top:30px\""); %>><input type = "button" value = "Back Main" onclick = "window.location.href = 'AdminMenu.jsp'" <%out.print("style=\"background-color:#DDDDDD;border-radius:9px;font-size:20px;margin-left:10px\""); %>></p>
 		</form>
 		</div>
